@@ -48,8 +48,8 @@ public class AlistUploader {
     public static void main(String[] args) {
         String localFile = "C:\\Code\\Java\\servlet\\AlistMedia\\out\\artifacts\\AlistMedia_Web_exploded\\tmp\\cover (2).jpg";
         String remotePath = "cover (2).jpg";
-        String url = "https://alist.5888888885.xyz";
-        String token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imx1b3RhbyIsInB3ZF90cyI6MTc0NzM3MjU3MCwiZXhwIjoxNzQ4MTc2MDg4LCJuYmYiOjE3NDgwMDMyODgsImlhdCI6MTc0ODAwMzI4OH0.EZvUuuDmW7Iu-9M9lLYiUHWBS87IuZpMOKlNhugVwI8";
+        String url = "https://alist.588878985.xyz";
+        String token = "eyJhbGciOiJIUzI1NiIsInR5cCI6B3ZF90cyI6MTc0NzM3MjU3MCwiZXhwIjoxNzQ4MTc2MDg4LCJuYmYiOjE3NDgwMDMyODgsImlhdCI6MTc0ODAwMzI4OH0.EZvUuuDmW7Iu-9M9lLYiUHWBS87IuZpMOKlNhugVwI8";
 
         try {
             String result = uploadFile(localFile, remotePath, url, token);

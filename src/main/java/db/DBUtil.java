@@ -12,7 +12,7 @@ public class DBUtil {
         try {
             // 配置数据源（实际项目中应改为读取配置文件）
             dataSource.setDriverClass("com.mysql.cj.jdbc.Driver");
-            dataSource.setJdbcUrl("jdbc:mysql://110.42.102.224:3306/alist_media?useSSL=false&serverTimezone=UTC");
+            dataSource.setJdbcUrl("jdbc:mysql://127.0.0.1:3306/alist_media?useSSL=false&serverTimezone=UTC");
             dataSource.setUser("root");
             dataSource.setPassword("mysql_FrKS2a");
 
