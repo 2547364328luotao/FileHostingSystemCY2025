@@ -1,0 +1,71 @@
+/* 聚光灯效果容器：确保全屏显示 */
+.spotlight {
+    min-height: 100vh;
+}
+
+/* 淡入动画定义 */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 登录卡片动画效果 */
+.login-card {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* 透明导航栏样式 */
+.navbar-transparent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* 输入框样式 */
+.form-control {
+    border-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+.form-control:focus {
+    border-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    box-shadow: none;
+}
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* 完全居中的主容器样式 */
+.main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 72px; /* 为导航栏留出空间 */
+}
+
+.spotlight-holder {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 72px);
+}
+
+body {
+    background: url('https://alist.5888888885.xyz/d/cloudflare/background_index.jpg') no-repeat center fixed;
+    background-size: cover;
+}

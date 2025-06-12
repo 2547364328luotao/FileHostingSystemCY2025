@@ -1,0 +1,126 @@
+/* 自定义样式 */
+.spotlight {
+    min-height: 100vh;
+}
+
+/* 手动编写的动画效果 */
+@keyframes bounceInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -3000px, 0) scaleY(3);
+    }
+    60% {
+        opacity: 1;
+        transform: translate3d(0, 25px, 0) scaleY(0.9);
+    }
+    75% {
+        transform: translate3d(0, -10px, 0) scaleY(0.95);
+    }
+    90% {
+        transform: translate3d(0, 5px, 0) scaleY(0.985);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scaleY(1);
+    }
+}
+
+/*添加背景*/
+body {
+    background-image: url('https://alist.5888888885.xyz/d/cloudflare/backgrounds.jpg');
+    background-repeat: no-repeat; /* 防止图片重复 */
+    background-size: cover;      /* 图片覆盖整个背景区域 */
+    background-position: center;  /* 图片居中显示 */
+    background-attachment: fixed; /* 关键：背景固定不滚动 */
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* 应用动画 */
+.brand-icon {
+    animation: bounceInDown 1s ease-out 1s both;
+}
+
+.main-title {
+    animation: fadeInUp 1s ease-out 2s both;
+}
+
+.description-text {
+    animation: fadeInUp 1s ease-out 2.5s both;
+}
+
+/* 透明导航栏样式 */
+.navbar-transparent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* 导航图标颜色样式 - 基于类名 */
+
+/* 为了更精确的选择，也可以使用类名方式 */
+.nav-icon-red svg {
+    color: #b4b4b4 !important;
+    transition: color 0.3s ease;
+}
+
+.nav-icon-red:hover svg {
+    color: #ff5252 !important;
+}
+
+.nav-icon-cyan svg {
+    color: #b4b4b4 !important;
+    transition: color 0.3s ease;
+}
+
+.nav-icon-cyan:hover svg {
+    color: #11cd65 !important;
+}
+
+.nav-icon-blue svg {
+    color: #b4b4b4 !important;
+    transition: color 0.3s ease;
+}
+
+.nav-icon-blue:hover svg {
+    color: #2196f3 !important;
+}
+
+.nav-icon-green svg {
+    color: #b4b4b4 !important;
+    transition: color 0.3s ease;
+}
+
+.nav-icon-green:hover svg {
+    color: #000000 !important;
+}
+
+.main>.container {
+    background-color: rgba(225, 225, 225, 0.8);
+}
+
+.main{
+/*离上边距离*/
+    margin-top: 60px;
+}
+
+/* 表格容器滚动样式 */
+.table-responsive {
+    max-height: 250px;
+    overflow-y: auto;
+    border-radius: 8px
+}

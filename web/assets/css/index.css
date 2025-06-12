@@ -1,0 +1,217 @@
+/* 浏览器兼容性重置 */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* 修复导航栏字体渲染问题 */
+.navbar {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* 自定义样式 */
+.spotlight {
+  min-height: 100vh;
+}
+
+/* 主体内容居中样式 */
+.main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spotlight-holder {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 手动编写的动画效果 */
+@keyframes bounceInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0) scaleY(3);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0) scaleY(0.9);
+  }
+
+  75% {
+    transform: translate3d(0, -10px, 0) scaleY(0.95);
+  }
+
+  90% {
+    transform: translate3d(0, 5px, 0) scaleY(0.985);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scaleY(1);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* 应用动画 */
+.brand-icon {
+  animation: bounceInDown 1s ease-out 1s both;
+}
+
+.main-title {
+  animation: fadeInUp 1s ease-out 2s both;
+}
+
+.description-text {
+  animation: fadeInUp 1s ease-out 2.5s both;
+}
+
+/* 透明导航栏样式 - 增强浏览器兼容性 */
+.navbar-transparent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.1) !important;
+  /* 毛玻璃效果 - 添加更多浏览器前缀 */
+  -webkit-backdrop-filter: blur(10px);
+  -moz-backdrop-filter: blur(10px);
+  -ms-backdrop-filter: blur(10px);
+  -o-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  /* 降级方案 - 如果不支持backdrop-filter */
+  background: rgba(0, 0, 0, 0.2) !important;
+}
+
+/* 支持backdrop-filter的浏览器使用更透明的背景 */
+@supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
+  .navbar-transparent {
+    background: rgba(0, 0, 0, 0.1) !important;
+  }
+}
+
+/* 修复导航栏在不同浏览器中的布局问题 */
+.navbar-collapse {
+  /* 重置定位，避免浏览器差异 */
+  position: static !important;
+  right: auto !important;
+}
+
+/* 响应式导航栏修复 */
+@media (max-width: 991.98px) {
+  .navbar-collapse.offcanvas-collapse {
+    position: fixed !important;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    transition: right 0.3s ease;
+    z-index: 1050;
+  }
+
+  .navbar-collapse.offcanvas-collapse.show {
+    right: 0 !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-collapse.offcanvas-collapse {
+    position: static !important;
+    right: auto !important;
+    width: auto !important;
+    height: auto !important;
+    background: transparent !important;
+  }
+}
+
+/* 导航图标颜色样式 - 基于类名 */
+
+/* 为了更精确的选择，也可以使用类名方式 */
+.nav-icon-red svg {
+  color: #ff4a83 !important;
+  transition: color 0.3s ease;
+}
+
+.nav-icon-red:hover svg {
+  color: #ff5252 !important;
+}
+
+.nav-icon-cyan svg {
+  color: #11cd65 !important;
+  transition: color 0.3s ease;
+}
+
+.nav-icon-cyan:hover svg {
+  color: #0b9649 !important;
+}
+
+.nav-icon-blue svg {
+  color: #2196f3 !important;
+  transition: color 0.3s ease;
+}
+
+.nav-icon-blue:hover svg {
+  color: #075697 !important;
+}
+
+.nav-icon-green svg {
+  color: #000000 !important;
+  transition: color 0.3s ease;
+}
+
+.nav-icon-green:hover svg {
+  color: #474747 !important;
+}
+
+/* IE和Edge兼容性修复 */
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+  .navbar-transparent {
+    background: rgba(0, 0, 0, 0.3) !important;
+  }
+
+  .navbar-collapse {
+    position: relative !important;
+  }
+}
+
+/* Firefox特定修复 */
+@-moz-document url-prefix() {
+  .navbar-transparent {
+    background: rgba(0, 0, 0, 0.25) !important;
+  }
+}
+
+/* Safari特定修复 */
+@media not all and (min-resolution:.001dpcm) {
+  @supports (-webkit-appearance:none) {
+    .navbar-transparent {
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+    }
+  }
+}
+
+body {
+  background: url('https://alist.5888888885.xyz/d/cloudflare/background_index.jpg') no-repeat center fixed;
+  background-size: cover;
+}
