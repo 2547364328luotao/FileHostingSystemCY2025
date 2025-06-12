@@ -1,18 +1,46 @@
-<div align="center">
-
 # 🌟 FileHostingSystem
 ## 基于Alist的现代化文件托管系统
 
-[![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)](https://www.java.com/)
-[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
-[![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
-[![Alist](https://img.shields.io/badge/Alist-00D9FF?style=for-the-badge&logo=files&logoColor=white)](https://alist.nn.ci/)
+<!-- 核心技术栈徽章 -->
+<div align="center">
+    <img src="https://img.shields.io/badge/Java-FF6B35?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java">
+    <img src="https://img.shields.io/badge/MySQL-00758F?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+    <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
+    <img src="https://img.shields.io/badge/Alist-70C0E8?style=for-the-badge&logo=files&logoColor=white" alt="Alist">
+</div>
+
+<br>
+
+<!-- 项目状态徽章 -->
+<div align="center">
+    <img src="https://img.shields.io/badge/Version-v0.054-blue?style=flat-square&logo=semver" alt="Version">
+    <img src="https://img.shields.io/badge/Build-Passing-brightgreen?style=flat-square&logo=github-actions" alt="Build Status">
+    <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square&logo=opensourceinitiative" alt="License">
+    <img src="https://img.shields.io/badge/Platform-Web-orange?style=flat-square&logo=html5" alt="Platform">
+</div>
+
+<br>
+
+<!-- 开发者联系方式 -->
+<div align="center">
+    <a href="https://space.bilibili.com/525163001"> 
+        <img src="https://img.shields.io/badge/哔哩哔哩-笙箫如夢-FF6D9D?style=flat&logo=bilibili&logoColor=white" alt="哔哩哔哩"> 
+    </a>
+    <a href="https://u.wechat.com/EPF8WK3pzJRhBUHQa3aqK1k?s=1"> 
+        <img src="https://img.shields.io/badge/微信-联系我-95EC69?style=flat&logo=wechat&logoColor=white" alt="微信"> 
+    </a>
+    <a href="https://qm.qq.com/cgi-bin/qm/qr?k=oig6gaE9LsTQdlHEt8D_Spb_yv8U5B4x"> 
+        <img src="https://img.shields.io/badge/QQ-雨中丁香-00B8E6?style=flat&logo=qq&logoColor=white" alt="QQ"> 
+    </a>
+    <a href="https://github.com/imsyy/SPlayer/tree/v3.0.0-beta.1"> 
+        <img src="https://img.shields.io/badge/GitHub-luotao-181717?style=flat&logo=github&logoColor=white" alt="GitHub"> 
+    </a>
+</div>
 
 *武汉城市学院2025上半年Web课程设计作品* 🎓
 
 [✨ 功能特性](#-核心功能) • [🚀 快速开始](#-部署说明) • [📖 文档](#-项目架构) • [🛠️ 技术栈](#-技术栈)
 
-</div>
 
 ---
 
