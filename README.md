@@ -1,5 +1,9 @@
+<div align="center">
+
 # 🌟 FileHostingSystem
 ## 基于Alist的现代化文件托管系统
+
+</div>
 
 <!-- 核心技术栈徽章 -->
 <div align="center">
