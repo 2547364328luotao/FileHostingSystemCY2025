@@ -20,13 +20,13 @@
 
 ### 基本信息
 
-| 项目 | 值 |
-|------|----|
-| **基础URL** | `http://localhost:8080/FileHostingSystemCY` |
-| **协议** | HTTP/HTTPS |
-| **数据格式** | JSON |
-| **字符编码** | UTF-8 |
-| **认证方式** | Session-based |
+| 项目               | 值                                            |
+| ------------------ | --------------------------------------------- |
+| **基础URL**  | `http://localhost:8080/FileHostingSystemCY` |
+| **协议**     | HTTP/HTTPS                                    |
+| **数据格式** | JSON                                          |
+| **字符编码** | UTF-8                                         |
+| **认证方式** | Session-based                                 |
 
 ### 🔧 技术特点
 
@@ -60,10 +60,10 @@
 
 ### 权限级别
 
-| 权限级别 | 字段 | 说明 |
-|----------|------|------|
-| **管理员** | `is_admin = 1` | 系统管理权限，可管理所有用户和文件 |
-| **编辑者** | `is_editor = 1` | 高级文件管理权限，可管理自己的文件 |
+| 权限级别           | 字段               | 说明                               |
+| ------------------ | ------------------ | ---------------------------------- |
+| **管理员**   | `is_admin = 1`   | 系统管理权限，可管理所有用户和文件 |
+| **编辑者**   | `is_editor = 1`  | 高级文件管理权限，可管理自己的文件 |
 | **普通用户** | `is_regular = 1` | 基本文件操作权限，可上传和查看文件 |
 
 ---
@@ -200,10 +200,10 @@
 
 **请求参数**：
 
-| 参数名 | 类型 | 必填 | 说明 |
-|--------|------|------|------|
-| `file` | File | 是 | 要上传的文件 |
-| `description` | String | 否 | 文件描述 |
+| 参数名          | 类型   | 必填 | 说明         |
+| --------------- | ------ | ---- | ------------ |
+| `file`        | File   | 是   | 要上传的文件 |
+| `description` | String | 否   | 文件描述     |
 
 **响应示例**：
 
@@ -240,12 +240,12 @@
 
 **请求参数**：
 
-| 参数名 | 类型 | 必填 | 说明 |
-|--------|------|------|------|
-| `page` | Integer | 否 | 页码，默认1 |
-| `size` | Integer | 否 | 每页大小，默认20 |
-| `type` | String | 否 | 文件类型过滤 |
-| `keyword` | String | 否 | 搜索关键词 |
+| 参数名      | 类型    | 必填 | 说明             |
+| ----------- | ------- | ---- | ---------------- |
+| `page`    | Integer | 否   | 页码，默认1      |
+| `size`    | Integer | 否   | 每页大小，默认20 |
+| `type`    | String  | 否   | 文件类型过滤     |
+| `keyword` | String  | 否   | 搜索关键词       |
 
 **响应示例**：
 
@@ -281,10 +281,10 @@
 
 **请求参数**：
 
-| 参数名 | 类型 | 必填 | 说明 |
-|--------|------|------|------|
-| `type` | String | 否 | 媒体类型：image/video/audio |
-| `limit` | Integer | 否 | 返回数量限制，默认50 |
+| 参数名    | 类型    | 必填 | 说明                        |
+| --------- | ------- | ---- | --------------------------- |
+| `type`  | String  | 否   | 媒体类型：image/video/audio |
+| `limit` | Integer | 否   | 返回数量限制，默认50        |
 
 **响应示例**：
 
@@ -324,9 +324,9 @@
 
 **请求参数**：
 
-| 参数名 | 类型 | 必填 | 说明 |
-|--------|------|------|------|
-| `fileId` | Integer | 是 | 文件ID（路径参数） |
+| 参数名     | 类型    | 必填 | 说明               |
+| ---------- | ------- | ---- | ------------------ |
+| `fileId` | Integer | 是   | 文件ID（路径参数） |
 
 **响应示例**：
 
@@ -497,39 +497,39 @@
 
 ### 认证相关错误
 
-| 错误代码 | HTTP状态码 | 说明 |
-|----------|------------|------|
-| `UNAUTHORIZED` | 401 | 未登录或登录已过期 |
-| `INVALID_CREDENTIALS` | 401 | 用户名或密码错误 |
-| `ACCESS_DENIED` | 403 | 权限不足 |
-| `SESSION_EXPIRED` | 401 | 会话已过期 |
+| 错误代码                | HTTP状态码 | 说明               |
+| ----------------------- | ---------- | ------------------ |
+| `UNAUTHORIZED`        | 401        | 未登录或登录已过期 |
+| `INVALID_CREDENTIALS` | 401        | 用户名或密码错误   |
+| `ACCESS_DENIED`       | 403        | 权限不足           |
+| `SESSION_EXPIRED`     | 401        | 会话已过期         |
 
 ### 文件操作错误
 
-| 错误代码 | HTTP状态码 | 说明 |
-|----------|------------|------|
-| `FILE_NOT_FOUND` | 404 | 文件不存在 |
-| `FILE_TOO_LARGE` | 413 | 文件大小超过限制 |
-| `INVALID_FILE_TYPE` | 400 | 不支持的文件类型 |
-| `UPLOAD_FAILED` | 500 | 文件上传失败 |
-| `DELETE_FAILED` | 500 | 文件删除失败 |
+| 错误代码              | HTTP状态码 | 说明             |
+| --------------------- | ---------- | ---------------- |
+| `FILE_NOT_FOUND`    | 404        | 文件不存在       |
+| `FILE_TOO_LARGE`    | 413        | 文件大小超过限制 |
+| `INVALID_FILE_TYPE` | 400        | 不支持的文件类型 |
+| `UPLOAD_FAILED`     | 500        | 文件上传失败     |
+| `DELETE_FAILED`     | 500        | 文件删除失败     |
 
 ### 系统错误
 
-| 错误代码 | HTTP状态码 | 说明 |
-|----------|------------|------|
-| `INTERNAL_ERROR` | 500 | 服务器内部错误 |
-| `DATABASE_ERROR` | 500 | 数据库操作失败 |
-| `ALIST_CONNECTION_FAILED` | 502 | Alist服务连接失败 |
-| `INVALID_PARAMETERS` | 400 | 请求参数无效 |
+| 错误代码                    | HTTP状态码 | 说明              |
+| --------------------------- | ---------- | ----------------- |
+| `INTERNAL_ERROR`          | 500        | 服务器内部错误    |
+| `DATABASE_ERROR`          | 500        | 数据库操作失败    |
+| `ALIST_CONNECTION_FAILED` | 502        | Alist服务连接失败 |
+| `INVALID_PARAMETERS`      | 400        | 请求参数无效      |
 
 ### 业务逻辑错误
 
-| 错误代码 | HTTP状态码 | 说明 |
-|----------|------------|------|
-| `DUPLICATE_FILENAME` | 409 | 文件名已存在 |
-| `STORAGE_QUOTA_EXCEEDED` | 413 | 存储配额已满 |
-| `OPERATION_NOT_ALLOWED` | 403 | 操作不被允许 |
+| 错误代码                   | HTTP状态码 | 说明         |
+| -------------------------- | ---------- | ------------ |
+| `DUPLICATE_FILENAME`     | 409        | 文件名已存在 |
+| `STORAGE_QUOTA_EXCEEDED` | 413        | 存储配额已满 |
+| `OPERATION_NOT_ALLOWED`  | 403        | 操作不被允许 |
 
 ---
 
@@ -573,7 +573,7 @@ function uploadFile(fileInput, description) {
     const formData = new FormData();
     formData.append('file', fileInput.files[0]);
     formData.append('description', description);
-    
+  
     $.ajax({
         url: '/FileHostingSystemCY/upload',
         type: 'POST',
@@ -638,7 +638,7 @@ function loadFileList(page = 1, type = '', keyword = '') {
 function displayFileList(files) {
     const fileListContainer = $('#fileList');
     fileListContainer.empty();
-    
+  
     files.forEach(function(file) {
         const fileItem = `
             <div class="file-item" data-file-id="${file.id}">
@@ -759,13 +759,13 @@ def login(username, password):
         'username': username,
         'password': password
     }
-    
+  
     response = session.post(
         'http://localhost:8080/FileHostingSystemCY/login',
         json=login_data,
         headers={'Content-Type': 'application/json'}
     )
-    
+  
     if response.status_code == 200:
         result = response.json()
         if result['success']:
@@ -783,13 +783,13 @@ def upload_file(file_path, description=''):
     with open(file_path, 'rb') as f:
         files = {'file': f}
         data = {'description': description}
-        
+      
         response = session.post(
             'http://localhost:8080/FileHostingSystemCY/upload',
             files=files,
             data=data
         )
-        
+      
         if response.status_code == 200:
             result = response.json()
             if result['success']:
@@ -810,12 +810,12 @@ def get_file_list(page=1, size=20, file_type='', keyword=''):
         'type': file_type,
         'keyword': keyword
     }
-    
+  
     response = session.get(
         'http://localhost:8080/FileHostingSystemCY/files',
         params=params
     )
-    
+  
     if response.status_code == 200:
         result = response.json()
         if result['success']:
@@ -833,7 +833,7 @@ if __name__ == '__main__':
     if login('admin', '123456'):
         # 上传文件
         upload_result = upload_file('/path/to/file.jpg', '测试图片')
-        
+      
         # 获取文件列表
         file_list = get_file_list(page=1, file_type='image')
         if file_list:
